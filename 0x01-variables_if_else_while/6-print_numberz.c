@@ -9,10 +9,10 @@ int main(void)
 	int a = 48;
 
 	while (a < 58)
-   		{
+	{
 		putchar (a);
 		a++;
 	}
-		printf("\n");
-		return (0);
-		}
+	printf("\n");
+	return (0);
+	}
