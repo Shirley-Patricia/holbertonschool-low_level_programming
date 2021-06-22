@@ -20,8 +20,10 @@ int main(void)
 				putchar(i);
 				putchar(j);
 				putchar(k);
-				putchar(',');
-				putchar(' '); }
+				if (i != 55)
+				{ putchar(',');
+				  putchar(' '); }
+			}
 		}
 	}
 	putchar ('\n');
