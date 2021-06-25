@@ -1,10 +1,12 @@
 #include "holberton.h"
+
 /**
  * print_square - Print a square with #.
  * @size: size of the square
  *
- * Return: Always 0.
+ * Return: anyway.
  */
+
 void print_square(int size)
 {
 	int i;
