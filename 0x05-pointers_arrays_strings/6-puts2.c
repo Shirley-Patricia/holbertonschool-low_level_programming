@@ -11,7 +11,7 @@ void puts2(char *str)
 {
 	int a;
 
-	for (a = 0; *(str + (2 * a)); a++)
+	for (a = 0; (*(str + (2 * a)) != '\0'); a++)
 	{
 		_putchar(*(str + (2 * a)));
 	}
