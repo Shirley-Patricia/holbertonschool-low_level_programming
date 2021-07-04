@@ -2,8 +2,8 @@
 # include <string.h>
 /**
  * _strcat - Concatenates the second string and the end of the first string .
- * @dest: string2
- * @src: string1
+ * @dest: string1
+ * @src: string2
  *
  * Return: char*.
  */
