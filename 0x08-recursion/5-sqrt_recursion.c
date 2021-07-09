@@ -25,7 +25,6 @@ int raiz(int x, int y)
 	return (raiz(x, y + 1));
 }
 
-
 /**
  * _sqrt_recursion - square root of a number.
  * @n: integer number
@@ -43,5 +42,5 @@ int _sqrt_recursion(int n)
 	{
 		return (0);
 	}
-	return raiz(n, 2);
+	return (raiz(n, 2));
 }
