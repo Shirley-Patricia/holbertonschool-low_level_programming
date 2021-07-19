@@ -18,8 +18,10 @@ int main(void)
 			printf("Fizz ");
 		else if (a % 5 == 0)
 			printf("Buzz ");
-		else
+		else if (a != 100)
 			printf("%d ", a);
+		else
+			printf("%d", a);
 	}
 	printf("\n");
 return (0);
