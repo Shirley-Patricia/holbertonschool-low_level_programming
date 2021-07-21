@@ -20,7 +20,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	int i = strlen(name);
 	int j = strlen(owner);
 
-	nom = malloc(sizeof(char) * i);
+	nom = malloc(sizeof(char) * (i + 1));
 	if (nom == NULL)
 	{
 		return (NULL);
@@ -30,7 +30,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		nom[i] = name[i];
 	}
 	nom[i] = '\0';
-	pro = malloc(sizeof(char) * j);
+	pro = malloc(sizeof(char) * (j + 1));
 	if (pro == NULL)
 	{
 		free(nom);
