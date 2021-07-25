@@ -14,7 +14,7 @@
 void print_all(const char *const format, ...)
 {
 	va_list any;
-	int i;
+	int i = 0;
 	char *sep = "";
 
 	format_t p[] = {
@@ -28,8 +28,6 @@ void print_all(const char *const format, ...)
 	va_start(any, format);
 	if (format)
 	{
-		i = 0;
-
 		while (format[i] != '\0')
 		{
 			int j = 0;
@@ -42,10 +40,10 @@ void print_all(const char *const format, ...)
 					p[j].print(any);
 					sep = ", ";
 				}
+				j++;
 			}
-			j++;
-		}
 		i++;
+		}
 	}
 	va_end(any);
 	printf("\n");
