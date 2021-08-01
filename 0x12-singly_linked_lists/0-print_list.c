@@ -5,17 +5,28 @@
 /**
  * print_list - prints the elements of the singly linked list
  * @h: name list
- * 
- * Description: singly linked list node structure
+ *
+ * Return: a value
  */
 
 size_t print_list(const list_t *h)
 {
+	const list_t *tmp;
+	int count;
+
 	if (h->str == NULL)
 	{
-		printf("[0] (nil)");
+		printf("[0] (nil)\n");
 	}
-	else 
-	printf("%s, %d, %p,", h->str, h->len, h->&next);
-	return (h);
+	else
+	printf("[%d] %s\n", h->len, h->str);
+
+	tmp = h;
+	count = 0;
+	while (tmp != NULL)
+	{
+		tmp = tmp->next;
+		count++;
+	}
+	return (count);
 }
