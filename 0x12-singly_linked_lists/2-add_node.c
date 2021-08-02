@@ -4,7 +4,7 @@
 #include <string.h>
 
 /**
- * add_node - adds a node at the beggining of the linked list
+ * add_node - adds a node at the beginning of the linked list
  * @str: text string
  * @head: head of the list
  *
