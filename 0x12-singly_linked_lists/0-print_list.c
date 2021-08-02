@@ -6,7 +6,7 @@
  * print_list - prints the elements of the singly linked list
  * @h: name list
  *
- * Return: a value
+ * Return: always 0
  */
 
 size_t print_list(const list_t *h)
