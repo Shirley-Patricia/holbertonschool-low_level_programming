@@ -3,13 +3,18 @@
 #include <stdio.h>
 
 /**
- * print_list - prints the elements of the singly linked list
- * @h: name list
- * 
- * Description: singly linked list node structure
+ * free_list - prints the elements of the singly linked list
+ * @head: head list
+ *
+ * Return: nothing.
  */
 
 void free_list(list_t *head)
 {
-
+	while (head != NULL)
+	{
+		free(head->str);
+		free(head);
+		head = head->next;
+	}
 }
