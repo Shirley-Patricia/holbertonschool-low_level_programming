@@ -4,11 +4,11 @@
 #include <string.h>
 
 /**
- * add_node - prints the elements of the singly linked list
- * @head: name list
- * @str: string
+ * add_node - adds a node at the beggining of the linked list
+ * @str: text string
+ * @head: head of the list
  *
- * Description: singly linked list node structure
+ * Return: Always 0.
  */
 
 list_t *add_node(list_t **head, const char *str)
