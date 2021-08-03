@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * add_nodeint - return the elements of the singly linked list
+ * add_nodeint_end - return the elements of the singly linked list
  * @head: head list
  * @n: new integer
  *
@@ -25,7 +25,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	if (*head == NULL)
 	{
 		*head = new;
-		return(new);
+		return (new);
 	}
 	while (last->next != NULL)
 		last = last->next;
