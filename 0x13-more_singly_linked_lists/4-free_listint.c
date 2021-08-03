@@ -10,6 +10,7 @@
 
 void free_listint(listint_t *head)
 {
+	if (head)
 	while (head != NULL)
 	{
 		free(head);
