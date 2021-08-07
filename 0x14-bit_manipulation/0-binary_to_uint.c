@@ -3,8 +3,8 @@
 #include <stdio.h>
 
 /**
- * print_list - prints the elements of the singly linked list
- * @h: name list
+ * binary_to_uint - convert binary number to an unsigned int.
+ * @b: binary string
  *
  * Return: a value
  */
@@ -13,7 +13,7 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int sum;
 	int i;
-	
+
 	sum = 0;
 	if (b == NULL)
 		return (0);
@@ -25,5 +25,5 @@ unsigned int binary_to_uint(const char *b)
 		sum <<= 1;
 		sum += b[i] - '0';
 	}
-	return (sum);	
+	return (sum);
 }
