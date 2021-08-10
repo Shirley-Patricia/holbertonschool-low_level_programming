@@ -6,10 +6,10 @@
 #include <sys/stat.h>
 #include <stdio.h>
 
-
 /**
- * read_textfile - reads a text file and prints it to the POSIX standard output.
+ * read_textfile - reads a text file and prints in standard output.
  * @letters: letters number
+ * @filename: file to read
  *
  * Return: a value
  */
@@ -20,7 +20,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int file_rd;
 	int file_wr;
 	char *buf;
-	
+
 	if (filename == NULL)
 		return (0);
 
@@ -39,7 +39,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	file_wr = write(STDOUT_FILENO, buf, file_rd);
 	if (file_wr == -1)
 		return (0);
-	
+
 	close(fd);
 	free(buf);
 	return (file_rd);
