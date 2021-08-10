@@ -7,8 +7,8 @@
 #include <stdio.h>
 
 /**
- * create_file - create a file.
- * @text_content: string to write in the filename
+ * append_text_to_file - appends text at the end of a file
+ * @text_content: string to write in the filename at the end.
  * @filename: name of the file
  *
  * Return: a value
