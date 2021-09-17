@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * print_dlistint - prints all the elements of a Doubly linked list.
+ * dlistint_len - number of elements of a Doubly linked list.
  * @h: name of the list
  *
  * Return: a integer.
@@ -17,7 +17,7 @@ size_t dlistint_len(const dlistint_t *h)
 	while (temp != NULL)
 	{
 		temp = temp->next;
-		count ++;
+		count++;
 	}
 	return (count);
 }
