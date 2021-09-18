@@ -3,9 +3,8 @@
 #include <stdio.h>
 
 /**
- * get_dnodeint_at_index - returns the nth node of a dobly linked list.
+ * sum_dlistint - returns the sum of all data of a doubly linked list.
  * @head: head of the list.
- * @index: index of the node
  *
  * Return: nothing.
  */
