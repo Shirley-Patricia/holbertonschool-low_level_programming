@@ -2,9 +2,8 @@
 #include <stdlib.h>
 
 /**
- * add_dnodeint_end - adds a new node at the end of a Doubly linked list.
+ * free_dlistint - free memory of a Doubly linked list.
  * @head: head of the list
- * @n: integer
  *
  * Return: a integer.
  */
