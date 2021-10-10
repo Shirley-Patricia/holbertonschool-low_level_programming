@@ -3,9 +3,10 @@
 #include <stdio.h>
 #include "hash_tables.h"
 /**
- * print_alphabet - print alphabet lowercase.
+ * hash_table_create - create a hash table.
+ * @size: node size
  *
- * Return: Always 0.
+ * Return: a pointer to the newly created hash table.
  */
 
 hash_table_t *hash_table_create(unsigned long int size)
@@ -21,8 +22,8 @@ hash_table_t *hash_table_create(unsigned long int size)
 	hash->array = malloc(sizeof(hash_node_t) * size);
 	if (hash->array == NULL)
 		return (NULL);
-		
+
 	for (i = 0; i < size; i++)
 		hash->array[i] = NULL;
-	return hash;
+	return (hash);
 }
