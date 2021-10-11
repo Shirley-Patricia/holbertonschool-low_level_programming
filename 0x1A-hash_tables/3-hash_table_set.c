@@ -14,8 +14,10 @@ hash_node_t *ht_pair(const char *key, const char *value)
 	hash_node_t *entry;
 
 	/*allocate the entry*/
-	entry = malloc(sizeof(hash_node_t));
-	
+	entry = malloc(sizeof(entry) * 1);
+	entry->key = malloc(strlen(key) + 1);
+	entry->value = malloc(strlen(value) + 1);
+
 	/*copy key and value in a place*/
 	strcpy(entry->key, key);
 	strcpy(entry->value, value);
@@ -26,6 +28,7 @@ hash_node_t *ht_pair(const char *key, const char *value)
 
 /**
  * hash_table_set - function adds an element to the hash table
+ * @ht: hash table
  * @key: key
  * @value: value pair key:value
  *
@@ -42,7 +45,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	if (key == NULL || strlen(key) == 0)
 		return (0);
-	
+
 	index = key_index((unsigned char *)key, ht->size);
 	entry = ht->array[index];
 
@@ -66,5 +69,5 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		entry = prev->next;
 	}
 	prev->next = ht_pair(key, value);
-	return(1);
+	return (1);
 }
