@@ -71,8 +71,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			strcpy(entry->value, value);
 			return (1);
 		}
+		/*prev = entry;
+		entry = prev->next;*/
+		entry = entry->next;
 		prev = entry;
-		entry = prev->next;
 	}
 	prev->next = ht_pair(key, value);
 	return (1);
