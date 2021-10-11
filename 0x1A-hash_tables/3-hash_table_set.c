@@ -15,8 +15,14 @@ hash_node_t *ht_pair(const char *key, const char *value)
 
 	/*allocate the entry*/
 	entry = malloc(sizeof(entry) * 1);
+	if (entry == NULL)
+		return (NULL);
 	entry->key = malloc(strlen(key) + 1);
+	if (entry->key == NULL)
+		return (NULL);
 	entry->value = malloc(strlen(value) + 1);
+	if (entry->value == NULL)
+		return (NULL);
 
 	/*copy key and value in a place*/
 	strcpy(entry->key, key);
