@@ -63,14 +63,17 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		{
 			free(entry->value);
 			entry->value = malloc(strlen(value) + 1);
+			if (entry->value == NULL)
+				return (0);
 			strcpy(entry->value, value);
 			return (1);
 		}
-		aux = entry;
-		entry = aux->next;
+		entry = entry->next;
 	}
-	ht->array[index] = ht_pair(key, value);
-	if (ht->array[index] == NULL)
+	aux = ht_pair(key, value);
+	if (aux == NULL)
 		return (0);
+	aux->next = ht->array[index];
+	ht->array[index] = aux;
 	return (1);
 }
