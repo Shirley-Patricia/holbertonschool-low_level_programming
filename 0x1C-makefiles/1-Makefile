@@ -1,5 +1,5 @@
 # creating of variables
-CC := gcc
-SRC := $(wildcard *.c)
+CC = gcc
+SRC = *.c
 all:
 	${CC} ${SRC} -o school
